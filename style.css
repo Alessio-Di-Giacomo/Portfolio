@@ -1,0 +1,562 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #ffffff;
+  }
+  html{
+    cursor: none;
+  }
+  body {
+    background-color: #1D1D1D;
+    height: 100vh;
+    box-sizing: border-box;
+    font-family: 'Futura Windows', sans-serif;
+    font-size: 16px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    top: 0;
+    left: 0;
+    cursor: none;
+  }
+  a{
+    cursor: none;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  #blob {
+    /* a perfectly square <svg> element that will never overflow the viewport */
+    position: absolute;
+    transform: translate(60%, 10%);
+    width: 90vmin;
+    height: 90vmin;
+    z-index: 1;
+    pointer-events:visibleFill;
+  }
+  /* -------------------------------------------- Cursor -------------------------------------------- */
+
+   .cursor{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #33c9f2;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    pointer-events: none;
+    z-index: 100;
+    transition: all .35s ease;
+    transition-property: background, transform, backdrop-filter;
+    transform-origin: 100% 100%;
+    outline-color: invert(100%);
+  }
+  
+  
+  /* -------------------------------------------- NAVIGATION BAR -------------------------------------------- */
+
+  nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 4vh 8.33vw;
+    font-size: 2rem;
+    z-index: -1;
+  }
+
+  .nav-el{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    border-radius: 100%;
+    width: 130px;
+    height: 130px;
+    transition: .2s ease-out;
+    z-index: 2;
+  }
+
+  
+
+  
+
+  .nav-el:hover{
+    background-color: #33c9f2;
+  }
+
+  .home, .about, .contact{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 20px;
+  }
+
+  .symbol-jap{
+    position: relative;
+    top: -1rem;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  .link-grow{
+    transform: scale(2.5);
+    border: 1px solid white;
+    backdrop-filter: invert(100%);
+  }
+  .link-grow::after{
+    content: '↑';
+    font-weight: 100;
+    font-size: .5rem;
+    color:#ffffff;
+  }
+
+
+    /* -------------------------------------------- SOCIAL ICONS -------------------------------------------- */
+
+.social{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  top: 45vh;
+  left: 3vw;
+}
+
+.social a{
+  padding: .2rem 0rem;
+}
+
+.social a img{
+  border-radius: 10px;
+  transition: animation 1s;
+  padding: .2rem;
+}
+
+.social a img:hover{ 
+  background: linear-gradient(to right, transparent, transparent);
+  border-radius: 10px;
+  animation-name: socialhue;
+  animation: socialhue 4s ease-in alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes socialhue {
+  0%{
+    background: linear-gradient(to right,#33c9f2, #f26d33);
+  }
+  50%{
+     filter: hue-rotate(360deg);
+  }
+  100%{
+    background: linear-gradient(to right,#33c9f2, #f26d33);
+  }
+}
+    /* -------------------------------------------- MAIN TITLE AND DESCR -------------------------------------------- */
+    
+    .title{
+      display: flex;
+      align-items: center;
+     justify-content: left;
+      flex-direction: column;
+      margin-top: 25vh;
+      margin: 25vh 30rem 0rem;
+      font-size: 6rem;
+      line-height: 6rem;
+    }
+
+    @keyframes lineAcross {
+      0%{
+        border: 20px #F26D33 solid;
+        transform: rotate(20deg);
+      } 50%{
+        border: 10px #F26D33 solid;
+      } 100%{
+        border: 20px #F26D33 solid;
+      }
+    }
+
+    .name{
+      position: relative;
+      justify-content: left;
+      margin-top: 5rem;
+      height:175px;
+      z-index: 100;
+     font-weight: bold;
+    }
+
+    .avatar{
+      position: relative;
+      top: -2rem;
+      width: 35%;
+      z-index: 10;
+    }
+
+    .name-bottom{
+      position: relative;
+      height:150px;
+      margin-top: 1rem;
+      margin-bottom: 3rem;
+      z-index: 100;
+      font-weight: bold;
+    }
+
+    .description{
+      position: relative;
+    display: flex;
+    float: right;
+    align-items:center;
+    justify-content: center;
+    margin-right: 12vw;
+    margin-top: 4rem;
+    }
+
+    .hello-emoji{
+      position: absolute;
+      transform: scale(.2);
+      top:15rem;
+      left: 32rem;
+    }
+
+    .frontend{
+      position: relative;
+      display: flex;
+      text-align: start;
+      -webkit-text-stroke-width: 1px;
+       -webkit-text-stroke-color: white;
+       color: transparent;
+       font-weight: 400;
+       right: -6rem;
+      font-size: 5rem;
+      letter-spacing: .5rem;
+      z-index: 3;
+    }
+/* -------------------------------------------- SLIDING SKILLS -------------------------------------------- */
+
+.sliding-section{
+  position: relative;
+  margin-top: 25rem;
+}
+
+.lines-up, .lines-down{
+  position: relative;
+  display: flex;
+  height: 6rem;
+  width: 190vw;
+}
+
+.lines-down{
+  transform: translateX(-10rem);
+}
+
+.line{
+  display: flex;
+  margin: 2rem;
+  margin-right: 20rem;
+  width: 32rem;
+  height: 1rem;
+  background-color: #F26D33;
+}
+
+.sliding-skills{
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 8rem;
+  width: 250vw;
+}
+
+.skills p{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  color: transparent;
+  margin: 1rem 5rem;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+  transition: color .2s;
+}
+
+.slide-grow{
+  transform: scale(3.5);
+  border: 1px solid white;
+  backdrop-filter: invert(100%);
+}
+
+/* -------------------------------------------- ABOUT ME SECTION -------------------------------------------- */
+.about-section, .contact-section{
+  width: 100vw;
+  border: none;
+  padding-bottom: 10rem;
+}
+
+.about-section{
+  margin-top: 12rem;
+
+}
+
+.about-frame, .contact-frame{
+  color: #1D1D1D;
+}
+
+.about-frame, .contact-frame{
+  width: 65vw;
+  height: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 6rem auto;
+  padding: 5rem;
+  border:none;
+}
+
+.about-frame{
+  background: url(./img/about-frame.png) no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+  box-shadow:-17px 20px  30px -15px rgba(24, 24, 24, 0.75);
+}
+
+.about-content, .contact-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-around ;
+  margin: 25% 0rem;
+}
+
+.about-text{
+  margin: 0 6rem 0rem 0rem;
+  font-size: 2rem;
+  color: #1D1D1D;
+}
+
+.about-text h1{
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #1D1D1D;
+  color: transparent;
+  font-size: 6rem;
+}
+
+.about-text b{
+  color:#F26D33;
+}
+
+.about-text p{
+  font-size: 2.25rem;
+  font-weight: 400;
+  margin: 2rem 0rem;
+  line-height: 3.5rem;
+  width: 800px;
+  color: #1D1D1D;
+  
+}
+
+.p-about-top{
+  margin-top: 50rem;
+}
+
+.animoji{
+  display: flex;
+  width: 25%;
+  height: 25%;
+  justify-content: center;
+}
+
+
+
+.call-contact a{
+  color: black;
+}
+
+
+/* -------------------------------------------- PROJECTS (I MIEI LAVORI) -------------------------------------------- */
+
+/* blob 1 ---------------*/
+
+#blob1{
+  position: relative;
+    width: 90vmin;
+    height: 90vmin;
+    z-index: -2;
+}
+
+/* ------------------- */
+.projects{
+  position: relative;
+}
+
+.projects-header-cont{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-header{
+  color: transparent;
+  font-size: 10rem;
+  font-weight: 900;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #ffffff;
+}
+
+.arrows{
+  position: absolute;
+  margin-left: 30rem;
+  top: -1rem;
+  left: 10rem;
+  backdrop-filter: invert(100%);
+  animation-name: arrows;
+  animation: arrows 2.5s cubic-bezier(.29,-0.52,0,1.3) infinite;
+  animation-iteration-count: infinite;
+}
+
+@keyframes arrows{
+  0% {
+    transform: translateY(0px);
+  }
+
+  25%{
+    transform: translateY(8px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.project-website-cont{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem;
+}
+
+.project-website-cont-2{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+ 
+}
+
+.outline-welthy{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url(./img/outline-welthy.png) no-repeat;
+  background-position: center;
+  padding: 5rem;
+}
+
+.outline-port{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url(./img/outline-portpng.png) no-repeat;
+  background-position: center;
+  padding: 5rem;
+}
+
+.call-to{
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #33c9f2;
+  width: 6rem;
+  padding: 1.5rem 11rem;
+  margin: 4rem auto;
+}
+
+.call-text{
+  color: #33c9f2;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* --------------------------------------------  CONTATTI   -------------------------------------------- */
+
+.contact-frame{
+  background: url(./img/contact-frame.png) no-repeat;
+  background-size: 100% 100%;
+  border-radius: 10px;
+  box-shadow:-17px 20px  30px -15px rgba(24, 24, 24, 0.75);
+  margin-top: 15rem;
+}
+
+.contact-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-title{
+  color: transparent;
+  font-size: 10rem;
+  font-weight: 900;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+}
+
+.mail, .messaggio{
+  border: 1px solid white;
+  width: 35rem;
+  margin: 1rem;
+  margin-bottom: .25rem;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+}
+
+.messaggio{
+  padding-bottom: 10rem;
+  margin-top: .25rem;
+}
+
+.invia{
+  background-color: #33c9f2;
+  margin: 6rem 15rem 4rem;
+  padding: 1.5rem 7rem;
+  border-radius: 40px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  transition: .2s ease-out;
+}
+
+.invia:hover{
+  background-color: white;
+  color: #33c9f2;
+  transition: .25s ease-in;
+}
+
+
+.hi-emoji{
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* --------------------------------------------  FOOTER   -------------------------------------------- */
+
+.nav-footer{
+  padding-bottom: 10rem;
+}

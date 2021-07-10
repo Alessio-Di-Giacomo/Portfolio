@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio - Alessio Di Giacomo</title>
+</head>
+<body>
+ 
+  <!-- CURSOR -->
+  <div class="cursor"></div>
+  <!-------------------------------------- SVG ANIMATION ----------------------------------------------------------------------->
+  
+
+  <svg viewBox="0 0 200 200" id="blob">
+    <defs>
+      <linearGradient id="gradient" gradientTransform="rotate(0)">
+        <stop id="gradientStop1" offset="10%" stop-color="var(--startColor)" />
+        <stop id="gradientStop2 " offset="80%" stop-color="var(--stopColor)" />
+      </linearGradient>
+    </defs>
+    <path d="" fill="url('#gradient')"></path>
+  </svg>
+
+  
+  <!---------------------------------------------- 1. NAV BAR ------------------------------------------------------------------------->
+  
+  
+  <nav>
+    <div class="nav-el" href="#">
+      <a href="#" class="home">home</a>
+      <a href="#" class="symbol-jap">お</a>
+    </div>
+    <div class="nav-el" href="#about">
+      <a href="#about" class="about">about</a>
+      <a href="#about" class="symbol-jap">た</a> 
+    </div>
+    <div class="nav-el">
+      <a href="#contact" class="contact">contact</a>
+      <a href="#contact" class="symbol-jap">く</a>
+    </div>
+  </nav>
+
+  <!---------------------------------------- 2. SOCIAL ICONS ------------------------------------------------------------------------->
+
+
+  <div class="social">
+    <a href="https://www.linkedin.com/in/alessio-di-giacomo/" target="_blank"><img src="./img/linkedin.png" alt=""></a>
+    <a href="#"><img src="./img/messenger.png" alt=""></a>
+    <a href="#"><img src="./img/whatsapp.png" alt=""></a>
+  </div>
+
+
+  <!--------------------------------------- 3. MAIN TITLE AND DESCR------------------------------------------------------------------------->
+  
+   
+  <header>
+    <div class="title">
+
+      <img src="./img/untitled.png" alt="" class="avatar">
+      <!-- <h1 class="name" id="name">Alessio</h1>
+      <h1 class="name-bottom" id="last-name">Di Giacomo</h1> -->
+    </div>
+    
+    <div class="description">
+      <h3 class="frontend">{frontend developer}</h3>
+    </div>
+  </header>
+
+
+  <!-------------------------------------------------------------------------------- 4. SLIDING SKILLS ------------------------------------------------------------------------->
+
+  <div class="sliding-section">
+    <div class="lines-up" id="line-slide">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+
+    <div class="sliding-skills" id="skill-slide">
+      <div class="skills"><p>HTML</p></div>
+      <div class="skills"><p>CSS</p></div>
+      <div class="skills"><p>JAVASCRIPT</p></div>
+      <div class="skills"><p>GIT</p></div>
+      <div class="skills"><p>SASS</p></div>
+      <div class="skills"><p>JQUERY</p></div>
+    </div>
+
+    <div class="lines-down" id="line-down-slide">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </div>
+
+  <!------------------------------------ 5. ABOUT ME SECTION ------------------------------------------------------------------------->
+<div id="about"></div>
+
+  <section class="about-section">
+
+    <div class="about-frame">
+      <div class="about-content">
+
+        <div class="about-text">
+          <h1 class="title-about">Chi sono?</h1>
+          <p class="p-about-top">Frontend Developer, sviluppo siti web utilizzando <b>HTML</b>, <b>CSS</b> e <b>Javascript</b>. &#128187;</p>
+          <p class="p-about">Ho sviluppato più di <b>10</b> progetti personali grazie al Bootcamp su <b>Treehouses</b>.  &#127891</p>
+        </div>
+        <img src="./img/memoji.png" alt="" class="animoji">
+
+      </div>
+      
+    </div>
+
+  </section>
+
+
+  <!-- ---------------------------------------- 6. I MIEI LAVORI ----------------------------------------------------------------------- -->
+
+
+    <section class="projects">
+      <div class="projects-header-cont">
+        <h1 class="project-header">PROGETTI</h1>
+      </div>
+      <img src="./img/arrows.png" alt="" class="arrows">
+
+      <div class="project-website-cont">
+        <div class="outline-welthy">
+          <a href="#"><img src="./img/welthy-snap.png" alt=""></a>
+        </div>
+      </div>
+
+      <div class="project-website-cont-2">
+        <div class="outline-port">
+          <a href="#"><img src="./img/port-snap.png" alt=""></a>
+        </div>
+      </div>
+
+    </section>
+
+
+      <!---------------------------------------- 7. CONTATTI ------------------------------------------------------------------------->
+    <div id="contact"></div>
+
+      <section class="contact-section">
+
+        <div class="contact-frame">
+          <div class="contact-content">
+            <div class="contact-text">
+
+              <h1 class="contact-title">contattami</h1>
+              <img src="./img/hi-emoji.png" alt="" class="hi-emoji">
+              <div class="mail"><p>mail</p></div>
+              <div class="messaggio"><p>messaggio</p></div>
+              <a href="#" class="invia">INVIA</a>
+          </div>
+          </div>
+        </div>
+      
+      </section>
+
+
+      <!----------------------------------------- NAV DOWN ------------------------------------------------------------------------->
+
+     
+      <nav class="nav-footer">
+        <div class="nav-el">
+          <a href="#" class="home">home</a>
+          <a href="#" class="symbol-jap">お</a>
+        </div>
+        <div class="nav-el">
+          <a href="#about" class="about">about</a>
+          <a href="#about" class="symbol-jap">た</a>
+        </div>
+        <div class="nav-el">
+          <a href="#contact" class="contact">contact</a>
+          <a href="#contact" class="symbol-jap">く</a>
+        </div>
+      </nav>
+
+
+  <!---------------------------------- SCRIPTS ------------------------------------------------------------------------->
+ 
+ 
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript">
+  // Animation on skills section
+
+    $(document).ready(function(){
+    $(this).scrollTop(0);
+    });
+    // moves from right to left skills section
+    $(document).on('scroll', function(){
+        $('#skill-slide').css('left', Math.max(200 - 0.55*window.scrollY, -1500) + 'px')
+        $('#line-slide').css('right', Math.max(600 - 0.2*window.scrollY, -200) + 'px')     
+        $('#line-down-slide').css('right', Math.max(50 - 0.2*window.scrollY, -400) + 'px')     
+        $('.project-website-cont').css('left', Math.max(1550 - 0.5*window.scrollY, 0) + 'px')     
+        $('.project-website-cont').css("opacity", 0.2+ $(window).scrollTop() / 4000)     
+        $('.project-website-cont-2').css('right', Math.max(2200 - 0.5*window.scrollY, 0) + 'px')     
+    });
+
+    let nameTitle = document.querySelector('.name')
+    let lastNameTitle = document.querySelector('.name-bottom')
+    
+    document.body.addEventListener('mousemove', cursor)
+    function cursor(e){
+      var x = e.pageX/120;
+      var y = e.pageY/120;
+      nameTitle.style.left = x + 'px';
+      nameTitle.style.top = y + 'px';
+      lastNameTitle.style.left = x + 'px';
+      lastNameTitle.style.top = y + 'px';
+  }
+    //Animation on page load
+    
+    const nameSlider = document.getElementById('name')
+    const lastNameSlider = document.getElementById('last-name')
+    const tl = new TimelineMax();
+   
+   
+    tl.fromTo(nameSlider, 1.8, {opacity: 0}, {opacity: 1, ease: Power2.easeInOut}, '.2')
+    tl.fromTo(lastNameSlider, 1.8, {opacity: 0}, {opacity: 1, ease: Power2.easeInOut} , '.2')
+    tl.fromTo(nameSlider, 1.5, {'transform': 'translateY(55%)'}, {'transform': 'translateY(0%)', ease: Power3.easeOut},'.5')
+    tl.fromTo(lastNameSlider, 1.5, {'transform': 'translateY(80%)'}, {'transform': 'translateY(0%)', ease: Power2.easeInOut},'')
+  
+  
+  </script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
